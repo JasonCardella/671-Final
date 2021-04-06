@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{57ff7083-cb5a-4869-908a-45ff90c04a7a}">
+		<property name="assetPath">
+			<value>LgBreak3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.83823129251700679</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{48821761-54ee-405d-859e-7ab3da07c72c}</destination>
+		</relationship>
+	</object>
+</objects>

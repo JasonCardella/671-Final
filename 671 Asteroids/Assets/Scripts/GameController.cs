@@ -79,7 +79,7 @@ public class GameController : MonoBehaviour
     public void IncrementScore()
     {
         score++;
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/ScoreGain");
         scoreText.text = "SCORE:" + score;
 
         if (score > hiscore)
@@ -127,6 +127,7 @@ public class GameController : MonoBehaviour
         // + 3 little ones
         // = 2
         asteroidsRemaining += 2;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/LgAsteroidBreak");
 
     }
 

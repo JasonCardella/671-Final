@@ -1,1 +1,6 @@
 Ship.png https://opengameart.org/content/spaceship-9
+
+Laser: https://freesound.org/people/burkay/sounds/130121/
+
+Lg Asteroid Break: https://freesound.org/people/NeoSpica/sounds/512243/
+

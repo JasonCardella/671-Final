@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9148352811164988003}
   - component: {fileID: 9148352811164988007}
   - component: {fileID: -413870423047892960}
+  - component: {fileID: -5673638002442364814}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Bullet
@@ -159,3 +160,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800fbd7e7ad38b149a440b41ffb85892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5673638002442364814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9148352811164988012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Fire
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

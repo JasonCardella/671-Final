@@ -25,6 +25,13 @@ public class ShipController : MonoBehaviour
             gameControllerObject.GetComponent<GameController>();
     }
 
+    private void Update()
+    {
+        // Has a bullet been fired
+        if (Input.GetKeyDown("space"))
+            ShootBullet();
+    }
+
     void FixedUpdate()
     {
 
@@ -37,9 +44,7 @@ public class ShipController : MonoBehaviour
             AddForce(transform.up * thrustForce *
                 Input.GetAxis("Vertical"));
 
-        // Has a bullet been fired
-        if (Input.GetKeyDown("space"))
-            ShootBullet();
+       
 
     }
 
