@@ -14,10 +14,14 @@ public class GameController : MonoBehaviour
     private int wave;
     private int increaseEachWave = 4;
 
+    private float timeLeft = 5.0f;
+
     public Text scoreText;
     public Text livesText;
     public Text waveText;
     public Text hiscoreText;
+
+
 
     // Use this for initialization
     void Start()
@@ -35,6 +39,17 @@ public class GameController : MonoBehaviour
         if (Input.GetKey("escape"))
             Application.Quit();
 
+        timeLeft -= Time.deltaTime;
+
+        if(timeLeft < 0)
+        {
+            //Play Ambience
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Ambience/Ambience");
+            Debug.Log("Ambience Playing");
+            timeLeft = 30.0f;
+            
+
+        }
     }
 
     void BeginGame()
@@ -79,7 +94,7 @@ public class GameController : MonoBehaviour
     public void IncrementScore()
     {
         score++;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/ScoreGain");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/ScoreGain");
         scoreText.text = "SCORE:" + score;
 
         if (score > hiscore)
@@ -127,7 +142,7 @@ public class GameController : MonoBehaviour
         // + 3 little ones
         // = 2
         asteroidsRemaining += 2;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/LgAsteroidBreak");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/LgAsteroidBreak");
 
     }
 
