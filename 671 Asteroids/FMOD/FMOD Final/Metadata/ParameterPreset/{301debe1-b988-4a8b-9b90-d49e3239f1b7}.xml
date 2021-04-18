@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{301debe1-b988-4a8b-9b90-d49e3239f1b7}">
+		<property name="name">
+			<value>Thrust</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0f0b7d70-df93-497d-ae77-1c24bfdb5d4e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{327e8e64-f3c9-4fe3-843e-e627c5ecebc3}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{327e8e64-f3c9-4fe3-843e-e627c5ecebc3}">
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

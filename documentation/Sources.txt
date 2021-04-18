@@ -2,5 +2,10 @@ Ship.png https://opengameart.org/content/spaceship-9
 
 Laser: https://freesound.org/people/burkay/sounds/130121/
 
-Lg Asteroid Break: https://freesound.org/people/NeoSpica/sounds/512243/
+Asteroid Break: https://freesound.org/people/NeoSpica/sounds/512243/
 
+Thrust: https://soundcloud.com/nasa/sets/rocket-engine-sounds
+
+Ambience: https://soundcloud.com/nasa/sets/spookyspacesounds
+
+Ship Explosion: https://www.zapsplat.com/music/short-small-explosion-with-no-tail-1/

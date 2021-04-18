@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c25f24a4-44e3-4871-b941-2219437446c3}">
+		<property name="assetPath">
+			<value>SmBreak1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.20680272108843537</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{48821761-54ee-405d-859e-7ab3da07c72c}</destination>
+		</relationship>
+	</object>
+</objects>

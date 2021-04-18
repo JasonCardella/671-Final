@@ -65,6 +65,9 @@ public class GameController : MonoBehaviour
         livesText.text = "LIVES: " + lives;
         waveText.text = "WAVE: " + wave;
 
+        FMODUnity.RuntimeManager.PlayOneShot("event:/VO/StartVO");
+
+
         SpawnAsteroids();
     }
 
@@ -142,7 +145,7 @@ public class GameController : MonoBehaviour
         // + 3 little ones
         // = 2
         asteroidsRemaining += 2;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/LgAsteroidBreak");
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/LgAsteroidBreak");
 
     }
 

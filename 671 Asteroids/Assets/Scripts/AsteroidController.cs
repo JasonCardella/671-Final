@@ -69,11 +69,13 @@ public class AsteroidController : MonoBehaviour
             {
                 // Just a small asteroid destroyed
                 gameController.DecrementAsteroids();
+                //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SmAsteroidBreak");
+
             }
 
             // Play a sound
-           //                           AudioSource.PlayClipAtPoint(
-           //                           destroy, Camera.main.transform.position);
+            //                           AudioSource.PlayClipAtPoint(
+            //                           destroy, Camera.main.transform.position);
 
             // Add to the score
             gameController.IncrementScore();

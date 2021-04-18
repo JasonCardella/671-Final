@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
+using System.Windows.Input;
 
 public class ShipController : MonoBehaviour
 {
@@ -13,9 +17,16 @@ public class ShipController : MonoBehaviour
 
     public GameObject bullet;
 
+
     private GameController gameController;
 
-    void Start()
+    public FMOD.Studio.EventInstance instance;
+    private string paramName="Thrust";
+    public float value = 0.0f;
+
+
+
+void Start()
     {
         // Get a reference to the game controller object and the script
         GameObject gameControllerObject =
@@ -23,6 +34,10 @@ public class ShipController : MonoBehaviour
 
         gameController =
             gameControllerObject.GetComponent<GameController>();
+
+
+        // Using the event path set in Unity editor
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Thruster");
     }
 
     private void Update()
@@ -30,6 +45,31 @@ public class ShipController : MonoBehaviour
         // Has a bullet been fired
         if (Input.GetKeyDown("space"))
             ShootBullet();
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            instance.start();
+
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            value += Time.deltaTime;
+            Debug.Log(value);
+            if (value > 5.0f)
+            {
+                value = 5.0f;
+                instance.setParameterByName(paramName, value);
+                
+            }
+            
+        }
+        
+        if(Input.GetKeyUp(KeyCode.W))
+        {
+            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            value = 0.0f;
+        }
     }
 
     void FixedUpdate()
@@ -43,8 +83,15 @@ public class ShipController : MonoBehaviour
         GetComponent<Rigidbody2D>().
             AddForce(transform.up * thrustForce *
                 Input.GetAxis("Vertical"));
-
        
+
+
+
+    }
+
+    void playThrust()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Thruster");
 
     }
 
@@ -66,6 +113,7 @@ public class ShipController : MonoBehaviour
                 velocity = new Vector3(0, 0, 0);
 
             gameController.DecrementLives();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Explode");
         }
     }
 

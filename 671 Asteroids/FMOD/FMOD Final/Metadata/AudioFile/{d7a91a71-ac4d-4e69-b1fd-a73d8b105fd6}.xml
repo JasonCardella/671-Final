@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{d7a91a71-ac4d-4e69-b1fd-a73d8b105fd6}">
+		<property name="assetPath">
+			<value>ThrusterSteady.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.1224489795918369</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{48821761-54ee-405d-859e-7ab3da07c72c}</destination>
+		</relationship>
+	</object>
+</objects>

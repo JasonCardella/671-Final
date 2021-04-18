@@ -554,6 +554,7 @@ MonoBehaviour:
   crash: {fileID: 0}
   shoot: {fileID: 0}
   bullet: {fileID: 9148352811164988012, guid: b2e8bb5d0bbc9b346bb38c34e206dfdf, type: 3}
+  value: 0
 --- !u!1 &1049211978
 GameObject:
   m_ObjectHideFlags: 0
