@@ -20,7 +20,7 @@ public class ShipController : MonoBehaviour
 
     private GameController gameController;
 
-    public FMOD.Studio.EventInstance instance;
+    private FMOD.Studio.EventInstance instance;
     private string paramName="Thrust";
     public float value = 0.0f;
 
@@ -89,12 +89,6 @@ void Start()
 
     }
 
-    void playThrust()
-    {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Thruster");
-
-    }
-
     void OnTriggerEnter2D(Collider2D c)
     {
 
@@ -111,6 +105,7 @@ void Start()
             // Remove all velocity from the ship
             GetComponent<Rigidbody2D>().
                 velocity = new Vector3(0, 0, 0);
+            value = 0.0f;
 
             gameController.DecrementLives();
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Explode");

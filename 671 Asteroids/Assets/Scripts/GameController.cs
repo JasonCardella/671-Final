@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameController : MonoBehaviour
 {
@@ -21,6 +23,11 @@ public class GameController : MonoBehaviour
     public Text waveText;
     public Text hiscoreText;
 
+    private FMOD.Studio.EventInstance livesinstance;
+    private string paramName = "Lives";
+
+    private FMOD.Studio.Bus MasterBus;
+
 
 
     // Use this for initialization
@@ -29,6 +36,11 @@ public class GameController : MonoBehaviour
 
         hiscore = PlayerPrefs.GetInt("hiscore", 0);
         BeginGame();
+
+        // Using the event path set in Unity editor
+        livesinstance = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/LowHealth");
+
+        MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
     }
 
     // Update is called once per frame
@@ -37,7 +49,8 @@ public class GameController : MonoBehaviour
 
         // Quit if player presses escape
         if (Input.GetKey("escape"))
-            Application.Quit();
+            SceneManager.LoadScene("Scenes/Title");
+
 
         timeLeft -= Time.deltaTime;
 
@@ -56,7 +69,7 @@ public class GameController : MonoBehaviour
     {
 
         score = 0;
-        lives = 3;
+        lives = 5;
         wave = 1;
 
         // Prepare the HUD
@@ -124,12 +137,33 @@ public class GameController : MonoBehaviour
     {
         lives--;
         livesText.text = "LIVES: " + lives;
+        if(lives == 3)
+        {
+            livesinstance.setParameterByName(paramName, 3);
+            livesinstance.start();
 
+
+        }
+        if (lives ==2)
+        {
+            livesinstance.setParameterByName(paramName, 2);
+
+        }
+        if (lives==1)
+        {
+            livesinstance.setParameterByName(paramName, 1);
+
+        }
         // Has player run out of lives?
         if (lives < 1)
         {
             // Restart the game
-            BeginGame();
+            SceneManager.LoadScene("Scenes/Title");
+            livesinstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            livesinstance.release();
+
+            MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
         }
     }
 
