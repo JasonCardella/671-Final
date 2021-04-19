@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/FMOD Final/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637543789047231598
+  lastModified: 637544301538900827
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -130,7 +130,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4638554232508598348}
+  - {fileID: 7801517311113510142}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1870406624055806201}
+  - {fileID: -294705653219106325}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -871,6 +871,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-294705653219106325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Thruster/Thrust
+  m_EditorClassIdentifier: 
+  Name: Thrust
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-267585484986979204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,7 +1003,7 @@ MonoBehaviour:
   - {fileID: 1168718754069426823}
   StringsBanks:
   - {fileID: -9191297755406220139}
-  stringsBankWriteTime: 637543789047231598
+  stringsBankWriteTime: 637544301538900827
   cacheVersion: 6
 --- !u!114 &591491019465104
 MonoBehaviour:
@@ -1040,7 +1060,7 @@ MonoBehaviour:
   Path: FMOD/FMOD Final/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637543789047211651
+  lastModified: 637544301538860931
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1144,6 +1164,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &3250667864035682449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LowHealth/Lives
+  m_EditorClassIdentifier: 
+  Name: Lives
+  Min: 1
+  Max: 5
+  Default: 2
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3666679021412352272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1244,6 +1284,26 @@ MonoBehaviour:
   Name: Thrust
   Min: 0
   Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5419019093059714715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Thruster/Thrust
+  m_EditorClassIdentifier: 
+  Name: Thrust
+  Min: 0
+  Max: 5
   Default: 0
   ID:
     data1: 0
@@ -1410,6 +1470,26 @@ MonoBehaviour:
   Min: 0
   Max: 5
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &7801517311113510142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LowHealth/Lives
+  m_EditorClassIdentifier: 
+  Name: Lives
+  Min: 1
+  Max: 5
+  Default: 2
   ID:
     data1: 0
     data2: 0

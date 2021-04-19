@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{70d39ad9-5e3a-4a9e-b52e-f165e2e98470}">
+		<property name="assetPath">
+			<value>1LiveVO.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.1144444444444446</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{48821761-54ee-405d-859e-7ab3da07c72c}</destination>
+		</relationship>
+	</object>
+</objects>
