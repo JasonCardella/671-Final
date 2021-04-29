@@ -875,5 +875,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Title.unity
   - Assets/Scenes/scene.unity
-  playerPath: C:/Users/Jason/Desktop/671 Final Project Repo/671-Final/PC BUILD/671
-    Asteroids.exe
+  playerPath: C:/Users/Jason/Desktop/671 Final Project Repo/671-Final/PC BUILD Milestone
+    5/671 Asteroids.exe

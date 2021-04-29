@@ -55,7 +55,6 @@ void Start()
         if (Input.GetKey(KeyCode.W))
         {
             value += Time.deltaTime;
-            Debug.Log(value);
             if (value > 5.0f)
             {
                 value = 5.0f;
